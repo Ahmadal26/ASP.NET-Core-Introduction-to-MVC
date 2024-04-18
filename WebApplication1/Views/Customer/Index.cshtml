@@ -1,0 +1,24 @@
+﻿@model List<Customer>
+<h1>Customer details:</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Civil ID</th>
+            <th>Phone</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var customer in Model)
+        {
+            <tr>
+                
+                <td><a href="/customer/Details/?civilId=@customer.CivilId"@customer.Name>@customer.Name</a></td>
+                <td>@customer.CivilId</td>
+                <td>@customer.Phone</td>
+                <td>@customer.Email</td>
+            </tr>
+        }
+    </tbody>
+</table>
